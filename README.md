@@ -1,5 +1,5 @@
 # Calculator App
-
+<img width="568" alt="Screen Shot 2022-11-10 at 8 39 24 PM" src="https://user-images.githubusercontent.com/96999730/201257943-b39f8c58-cb58-4a1a-8821-78a2a89dc79c.png">
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
