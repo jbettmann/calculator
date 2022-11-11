@@ -8,7 +8,7 @@ export const Controls = ({ calc, setCalc, setResult }) => {
     // checks if operator was last entered to calc
     if (
       (operators.includes(value) && calc === "") ||
-      (value === "." && calc.includes(value)) ||
+      (value === "." && calc.slice(-1) === ".") ||
       (operators.includes(value) && operators.includes(calc.slice(-1)))
     ) {
       return;
