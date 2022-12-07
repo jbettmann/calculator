@@ -9,6 +9,8 @@ export const Controls = ({ calc, setCalc, setResult }) => {
     if (
       (operators.includes(value) && calc === "") ||
       (value === "." && calc.slice(-1) === ".") ||
+      // should have added below
+      // (value === "." && calc.slice(-4).includes(".")) ||
       (operators.includes(value) && operators.includes(calc.slice(-1)))
     ) {
       return;
@@ -73,27 +75,28 @@ export const Controls = ({ calc, setCalc, setResult }) => {
       </div>
       <div className="all-digits">
         <div className="digits">
-          <button className="digits-btn special" onClick={deleteLastDigit}>
-            DEL
-          </button>
-          <button
-            className="digits-btn special"
-            onClick={() => updateCalc("(")}
-          >
-            (
-          </button>
           <button
             className="digits-btn special"
             onClick={() => updateCalc(")")}
           >
             )
           </button>
+
+          <button
+            className="digits-btn special"
+            onClick={() => updateCalc("(")}
+          >
+            (
+          </button>
+          <button className="digits-btn special" onClick={deleteLastDigit}>
+            DEL
+          </button>
           {calcDigits()}
         </div>
         <div className="other-digits">
-          <button onClick={() => updateCalc("0")}>0</button>
-          <button onClick={() => updateCalc(".")}>.</button>
           <button onClick={clearResult}>C</button>
+          <button onClick={() => updateCalc(".")}>.</button>
+          <button onClick={() => updateCalc("0")}>0</button>
         </div>
       </div>
     </div>
